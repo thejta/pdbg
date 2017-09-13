@@ -246,8 +246,8 @@ static struct target_class *get_target_class(const char *name)
 	return target_class;
 }
 
-extern struct hw_unit_info *__start_hw_units;
-extern struct hw_init_info *__stop_hw_units;
+struct hw_unit_info *__start_hw_units;
+struct hw_init_info *__stop_hw_units;
 struct hw_unit_info *find_compatible_target(const char *compat)
 {
 	struct hw_unit_info **p;
