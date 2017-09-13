@@ -92,7 +92,7 @@ int ram_step_thread(struct target *thread_target, int count)
 {
 	struct thread *thread;
 
-	assert(!strcmp(thread_target->class, "thread"));
+	assert(!strcmp(thread_target->class_type, "thread"));
 	thread = target_to_thread(thread_target);
 	return thread->step(thread, count);
 }
@@ -101,7 +101,7 @@ int ram_start_thread(struct target *thread_target)
 {
 	struct thread *thread;
 
-	assert(!strcmp(thread_target->class, "thread"));
+	assert(!strcmp(thread_target->class_type, "thread"));
 	thread = target_to_thread(thread_target);
 	return thread->start(thread);
 }
@@ -110,7 +110,7 @@ int ram_stop_thread(struct target *thread_target)
 {
 	struct thread *thread;
 
-	assert(!strcmp(thread_target->class, "thread"));
+	assert(!strcmp(thread_target->class_type, "thread"));
 	thread = target_to_thread(thread_target);
 	return thread->stop(thread);
 }
@@ -119,7 +119,7 @@ int ram_sreset_thread(struct target *thread_target)
 {
 	struct thread *thread;
 
-	assert(!strcmp(thread_target->class, "thread"));
+	assert(!strcmp(thread_target->class_type, "thread"));
 	thread = target_to_thread(thread_target);
 	return thread->sreset(thread);
 }

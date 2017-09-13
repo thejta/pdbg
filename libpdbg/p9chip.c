@@ -203,7 +203,7 @@ struct thread p9_thread = {
 	.target = {
 		.name = "POWER9 Thread",
 		.compatible = "ibm,power9-thread",
-		.class = "thread",
+		.class_type = "thread",
 		.probe = p9_thread_probe,
 	},
 	.start = p9_thread_start,
@@ -245,7 +245,7 @@ struct chiplet p9_chiplet = {
 	.target = {
 		.name = "POWER9 Chiplet",
 		.compatible = "ibm,power9-core",
-		.class = "chiplet",
+		.class_type = "chiplet",
 		.probe = p9_chiplet_probe,
 	},
 };

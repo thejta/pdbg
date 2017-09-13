@@ -310,7 +310,7 @@ struct thread p8_thread = {
 	.target = {
 		.name = "POWER8 Thread",
 		.compatible = "ibm,power8-thread",
-		.class = "thread",
+		.class_type = "thread",
 		.probe = p8_thread_probe,
 	},
 	.step = p8_thread_step,
@@ -344,7 +344,7 @@ struct chiplet p8_chiplet = {
 	.target = {
 		.name = "POWER8 Chiplet",
 		.compatible = "ibm,power8-core",
-		.class = "chiplet",
+		.class_type = "chiplet",
 		.probe = p8_chiplet_probe,
 	},
 };

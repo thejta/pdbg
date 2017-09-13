@@ -114,7 +114,7 @@ struct pib fsi_pib = {
 	.target = {
 		.name =	"POWER FSI2PIB",
 		.compatible = "ibm,fsi-pib",
-		.class = "pib",
+		.class_type = "pib",
 	},
 	.read = fsi2pib_getscom,
 	.write = fsi2pib_putscom,
@@ -224,7 +224,7 @@ struct opb p8_opb = {
 	.target = {
 		.name = "POWER8 OPB",
 		.compatible = "ibm,power8-opb",
-		.class = "opb",
+		.class_type = "opb",
 	},
 	.read = p8_opb_read,
 	.write = p8_opb_write,
@@ -277,7 +277,7 @@ struct fsi p8_opb_hmfsi = {
 	.target = {
 		.name = "POWER8 OPB attached hMFSI",
 		.compatible = "ibm,power8-opb-hmfsi",
-		.class = "fsi",
+		.class_type = "fsi",
 		.probe = p8_hmfsi_probe,
 	},
 	.read = p8_hmfsi_read,
@@ -335,7 +335,7 @@ struct fsi cfam_hmfsi = {
 	.target = {
 		.name = "CFAM hMFSI Port",
 		.compatible = "ibm,fsi-hmfsi",
-		.class = "fsi",
+		.class_type = "fsi",
 		.probe = cfam_hmfsi_probe,
 	},
 	.read = cfam_hmfsi_read,

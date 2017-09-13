@@ -495,7 +495,7 @@ struct fsi bmcfsi = {
 	.target = {
 		.name = "BMC GPIO bit-banging FSI master",
 		.compatible = "ibm,bmcfsi",
-		.class = "fsi",
+		.class_type = "fsi",
 		.probe = bmcfsi_probe,
 
 	},

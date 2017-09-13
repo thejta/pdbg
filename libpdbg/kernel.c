@@ -136,7 +136,7 @@ struct fsi kernel_fsi = {
 	.target = {
 		.name = "Kernel based FSI master",
 		.compatible = "ibm,kernel-fsi",
-		.class = "fsi",
+		.class_type = "fsi",
 		.probe = kernel_fsi_probe,
 	},
 	.read = kernel_fsi_getcfam,

@@ -156,7 +156,7 @@ struct pib p8_i2c_pib = {
 	.target = {
 		.name =	"POWER8 I2C Slave",
 		.compatible = "ibm,power8-i2c-slave",
-		.class = "pib",
+		.class_type = "pib",
 		.probe = i2c_target_probe,
 	},
 	.read = i2c_getscom,

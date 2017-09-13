@@ -109,7 +109,7 @@ struct pib host_pib = {
 	.target = {
 		.name = "Host based debugfs SCOM",
 		.compatible  = "ibm,host-pib",
-		.class = "pib",
+		.class_type = "pib",
 		.probe = host_pib_probe,
 	},
 	.read = xscom_read,

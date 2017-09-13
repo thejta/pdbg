@@ -34,7 +34,7 @@ struct fsi fake_fsi = {
 	.target = {
 		.name =	"Fake FSI",
 		.compatible = "ibm,fake-fsi",
-		.class = "fsi",
+		.class_type = "fsi",
 	},
 	.read = fake_fsi_read,
 	.write = fake_fsi_write,
@@ -58,7 +58,7 @@ struct pib fake_pib = {
 	.target = {
 		.name =	"Fake PIB",
 		.compatible = "ibm,fake-pib",
-		.class = "pib",
+		.class_type = "pib",
 	},
 	.read = fake_pib_read,
 	.write = fake_pib_write,

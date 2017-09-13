@@ -749,11 +749,11 @@ void print_target(struct dt_node *dn, int level)
 		target = dn->target;
 		if (target) {
 			char c = 0;
-			if (!strcmp(target->class, "pib"))
+			if (!strcmp(target->class_type, "pib"))
 				c = 'p';
-			else if (!strcmp(target->class, "chiplet"))
+			else if (!strcmp(target->class_type, "chiplet"))
 				c = 'c';
-			else if (!strcmp(target->class, "thread"))
+			else if (!strcmp(target->class_type, "thread"))
 				c = 't';
 
 			if (c)

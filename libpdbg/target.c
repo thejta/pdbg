@@ -20,7 +20,7 @@ struct list_head target_classes = LIST_HEAD_INIT(target_classes);
 static struct dt_node *get_class_target_addr(struct dt_node *dn, const char *name, uint64_t *addr)
 {
 	/* Check class */
-	while (strcmp(dn->target->class, name)) {
+	while (strcmp(dn->target->class_type, name)) {
 		/* Keep walking the tree translating addresses */
 		*addr += dt_get_address(dn, 0, NULL);
 		dn = dn->parent;
@@ -291,7 +291,7 @@ void targets_init(void *fdt)
 			dn->target = new_target;
 			index = dt_prop_get_u32_def(dn, "index", -1);
 			dn->target->index = index;
-			target_class = get_target_class(new_target->class);
+			target_class = get_target_class(new_target->class_type);
 			list_add(&target_class->targets, &new_target->class_link);
 			PR_DEBUG("Found target %s for %s\n", new_target->name, dn->name);
 		} else

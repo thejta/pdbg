@@ -85,7 +85,7 @@ int adu_getmem(struct target *adu_target, uint64_t start_addr, uint8_t *output, 
 	int rc = 0;
 	uint64_t addr;
 
-	assert(!strcmp(adu_target->class, "adu"));
+	assert(!strcmp(adu_target->class_type, "adu"));
 	adu = target_to_adu(adu_target);
 
 	/* We read data in 8-byte aligned chunks */
@@ -118,7 +118,7 @@ int adu_putmem(struct target *adu_target, uint64_t start_addr, uint8_t *input, u
 	int rc = 0, tsize;
 	uint64_t addr, data, end_addr;
 
-	assert(!strcmp(adu_target->class, "adu"));
+	assert(!strcmp(adu_target->class_type, "adu"));
 	adu = target_to_adu(adu_target);
 	end_addr = start_addr + size;
 	for (addr = start_addr; addr < end_addr; addr += tsize, input += tsize) {
@@ -388,7 +388,7 @@ struct adu p8_adu = {
 	.target = {
 		.name =	"POWER8 ADU",
 		.compatible = "ibm,power8-adu",
-		.class = "adu",
+		.class_type = "adu",
 	},
 	.getmem = p8_adu_getmem,
 	.putmem = p8_adu_putmem,
@@ -399,7 +399,7 @@ struct adu p9_adu = {
 	.target = {
 		.name =	"POWER9 ADU",
 		.compatible = "ibm,power9-adu",
-		.class = "adu",
+		.class_type = "adu",
 	},
 	.getmem = p9_adu_getmem,
 	.putmem = p9_adu_putmem,

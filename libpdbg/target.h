@@ -40,7 +40,7 @@ struct target_class {
 struct target {
 	char *name;
 	char *compatible;
-	char *class;
+	char *class_type;
 	int (*probe)(struct target *target);
 	int index;
 	struct dt_node *dn;
